@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#16080d" />
+  <meta name="description" content="Campo interactivo de lirios rojos, blancos y degradados." />
+  <title>Campo de lirios para Dani</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <main id="app">
+    <canvas
+      id="garden"
+      aria-label="Campo interactivo de lirios rojos y blancos"
+    ></canvas>
+
+    <div class="atmosphere" aria-hidden="true"></div>
+    <div class="grain" aria-hidden="true"></div>
+
+    <section class="intro" id="intro">
+      <p class="eyebrow">UN CAMPO PARA TI</p>
+      <h1>Entre todos los lirios, algunos guardan algo especial</h1>
+      <p>
+        Toca las flores. Todas soltarán polen, pero las que brillan formarán tu ramo.
+      </p>
+      <button id="enterButton" type="button">Entrar al campo</button>
+    </section>
+
+    <section class="hud hidden" id="hud" aria-live="polite">
+      <div class="counter">
+        <span class="counter-label">Flores del ramo</span>
+        <strong><span id="selectedCount">0</span>/<span id="targetCount">7</span></strong>
+      </div>
+
+      <button id="resetButton" class="soft-button" type="button">
+        Reiniciar
+      </button>
+    </section>
+
+    <div class="hint hidden" id="hint">
+      Las flores con brillo pertenecen al ramo
+    </div>
+
+    <section
+      class="flower-message hidden"
+      id="flowerMessage"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="flowerMessageTitle"
+    >
+      <button
+        id="closeFlowerMessage"
+        class="message-close"
+        type="button"
+        aria-label="Cerrar mensaje"
+      >×</button>
+      <p class="eyebrow">UN MENSAJE ESCONDIDO</p>
+      <h2 id="flowerMessageTitle">Para Dani</h2>
+      <p id="flowerMessageText"></p>
+    </section>
+
+    <section class="bouquet-stage hidden" id="bouquetStage" aria-live="polite">
+      <div class="bouquet-copy">
+        <p class="eyebrow">TU RAMO</p>
+        <h2>Ahora toca cada flor</h2>
+        <p>Cada lirio conserva el mensaje que encontraste en el campo.</p>
+      </div>
+
+      <canvas
+        id="bouquetCanvas"
+        aria-label="Ramo interactivo de siete lirios"
+      ></canvas>
+
+      <button id="returnToField" class="soft-button return-button" type="button">
+        Volver al campo
+      </button>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
