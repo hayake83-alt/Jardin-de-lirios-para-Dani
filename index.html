@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#030713">
+  <title>Campo de lirios para Dani</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main id="app">
+  <section id="fieldScene" class="scene">
+    <canvas id="gardenCanvas"></canvas>
+    <header class="field-copy"><p>UN CAMPO PARA TI</p><h1>Encuentra los siete lirios que brillan</h1></header>
+    <aside class="counter"><span>Flores elegidas</span><strong><span id="selectedCount">0</span> / 7</strong></aside>
+    <div class="hint">✦ Todas las flores sueltan polen. Solo las luminosas forman el ramo.</div>
+    <button id="resetButton" class="glass reset" type="button">↻ Reiniciar</button>
+  </section>
+
+  <section id="bouquetScene" class="scene hidden">
+    <canvas id="bouquetCanvas"></canvas>
+    <header class="bouquet-copy"><p>TU RAMO</p><h2>Ahora toca cada flor</h2><span>Cada lirio guarda un mensaje diferente.</span></header>
+    <aside class="info-panel"><p>FLORES DEL RAMO</p><div id="flowerInfoList"></div></aside>
+    <button id="backToField" class="glass back" type="button">← Volver al campo</button>
+  </section>
+
+  <section id="intro" class="modal intro">
+    <p>UN JARDÍN NOCTURNO</p>
+    <h2>Entre cientos de flores, siete fueron elegidas para ti</h2>
+    <span>Recorre el campo, toca las flores y deja que el ramo se forme poco a poco.</span>
+    <button id="enterButton" type="button">Entrar al jardín</button>
+  </section>
+
+  <section id="messageModal" class="modal hidden" role="dialog" aria-modal="true">
+    <button id="closeMessage" class="close" type="button">×</button>
+    <p>UN MENSAJE ESCONDIDO</p>
+    <h2 id="messageFlowerName">Para Dani</h2>
+    <div id="messageText"></div>
+  </section>
+</main>
+<script src="script.js"></script>
+</body>
+</html>
