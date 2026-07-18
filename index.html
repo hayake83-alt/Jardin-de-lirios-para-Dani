@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#050914" />
+  <title>Campo de lirios para Dani</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main id="app">
+    <section class="field-panel" aria-label="Campo interactivo de lirios">
+      <canvas id="garden"></canvas>
+
+      <header class="field-title">
+        <p>ELIGE LOS SIETE LIRIOS</p>
+        <h1>que quieras conservar</h1>
+      </header>
+
+      <aside class="counter-panel" aria-live="polite">
+        <span>Flores elegidas</span>
+        <strong><span id="selectedCount">0</span> / <span id="targetCount">7</span></strong>
+      </aside>
+
+      <div class="field-hint">
+        <span class="hand">☝</span>
+        <span>Toca cualquier flor para soltar su polen</span>
+      </div>
+
+      <button id="resetButton" class="round-button reset-button" type="button">
+        ↻&nbsp;&nbsp;Reiniciar
+      </button>
+    </section>
+
+    <section class="bouquet-panel" aria-label="Ramo en construcción">
+      <div class="bouquet-heading">
+        <p>TU RAMO</p>
+        <h2 id="bouquetInstruction">Encuentra las flores que brillan</h2>
+        <span id="bouquetSubtext">Las flores elegidas aparecerán aquí.</span>
+      </div>
+
+      <canvas id="bouquetCanvas"></canvas>
+
+      <div id="flowerLegend" class="flower-legend" aria-live="polite"></div>
+    </section>
+
+    <section
+      id="messageModal"
+      class="message-modal hidden"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="messageTitle"
+    >
+      <button id="closeMessage" type="button" aria-label="Cerrar">×</button>
+      <p>UN MENSAJE ESCONDIDO</p>
+      <h2 id="messageTitle">Para Dani</h2>
+      <div id="messageText"></div>
+    </section>
+
+    <section id="intro" class="intro">
+      <p>UN CAMPO PARA TI</p>
+      <h2>Entre todos los lirios, siete guardan algo especial</h2>
+      <span>
+        Toca las flores. Todas liberarán polen, pero únicamente las que brillan
+        se cortarán para formar el ramo.
+      </span>
+      <button id="enterButton" type="button">Entrar al campo</button>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
