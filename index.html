@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,viewport-fit=cover">
+<meta name="theme-color" content="#040914">
+<title>Campo de lirios para Dani</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main id="app">
+  <section id="fieldScene" class="scene field-scene">
+    <img class="photo-bg" src="assets/field-night.jpg" alt="">
+    <canvas id="fieldCanvas"></canvas>
+    <header class="title-copy">
+      <p>UN CAMPO PARA TI</p>
+      <h1>Encuentra los siete lirios que brillan</h1>
+    </header>
+    <aside class="counter"><span>Flores elegidas</span><strong><span id="count">0</span> / 7</strong></aside>
+    <div class="hint">✦ Toca cualquier flor para soltar polen. Las luminosas formarán el ramo.</div>
+    <button id="reset" class="glass reset" type="button">↻ Reiniciar</button>
+  </section>
+
+  <section id="bouquetScene" class="scene bouquet-scene hidden">
+    <canvas id="bouquetCanvas"></canvas>
+    <header class="bouquet-copy">
+      <p>TU RAMO</p>
+      <h2>Ahora toca cada flor</h2>
+      <span>Cada lirio guarda un mensaje distinto.</span>
+    </header>
+    <aside class="info-panel">
+      <p>FLORES DEL RAMO</p>
+      <div id="infoList"></div>
+    </aside>
+    <button id="back" class="glass back" type="button">← Volver al campo</button>
+  </section>
+
+  <section id="intro" class="modal">
+    <p>UN JARDÍN NOCTURNO</p>
+    <h2>Entre cientos de flores, siete fueron elegidas para ti</h2>
+    <span>Esta versión usa texturas fotográficas para que el campo y el ramo se sientan menos ilustrados y más reales.</span>
+    <button id="enter" type="button">Entrar al jardín</button>
+  </section>
+
+  <section id="message" class="modal hidden">
+    <button id="closeMessage" class="close" type="button">×</button>
+    <p>UN MENSAJE ESCONDIDO</p>
+    <h2 id="messageTitle">Para Dani</h2>
+    <div id="messageBody"></div>
+  </section>
+</main>
+<script src="script.js"></script>
+</body>
+</html>
